@@ -1,0 +1,27 @@
+{
+  "name": "lcsc2kicad",
+  "version": "1.0.0",
+  "description": "Extract Kicad Lib and Footprint from lcsc page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remyar/LCSC2kicad.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remyar/LCSC2kicad/issues"
+  },
+  "homepage": "https://github.com/remyar/LCSC2kicad#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "node-fetch": "^3.1.0",
+    "node-html-parser": "^5.1.0",
+    "puppeteer": "^11.0.0",
+    "svg-parser": "^2.0.4",
+    "svgson": "^5.2.1"
+  }
+}
