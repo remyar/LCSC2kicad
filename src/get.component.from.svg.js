@@ -8,7 +8,7 @@ let config = {
 
 module.exports = async (svg) => {
     return new Promise(async (resolve, reject) => {
-        let str = "";
+        let Tab2 = [];
 
         svg.children.forEach(element => {
             let Tab = [];
@@ -62,9 +62,12 @@ module.exports = async (svg) => {
                     break;
                 }
             }
-            str += Tab.join(' ') + "\n";
+            if ( Tab.length > 0 ){
+                Tab2.push(Tab.join(' '));
+            }
+            
         });
 
-        resolve(str);
+        resolve(Tab2);
     });
 }
