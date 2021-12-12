@@ -1,6 +1,7 @@
 const actions = require('./action');
 const SVGJson = require('svg-parser')
-const getComponentFromSvg = require('./get.component.from.svg')
+const getComponentFromSvg = require('./get.component.from.svg');
+const getFootprintFromSvg = require('./get.footprint.from.svg');
 const fs = require('fs');
 const path = require('path');
 
@@ -58,6 +59,15 @@ module.exports = async (url) => {
         let str = Tab.join("\n");
 
         fs.writeFileSync(path.resolve(__dirname, "../"+ new Date().getTime() +".lib"), str);
+
+
+        if ( footprint ){
+            let _footprint = await getFootprintFromSvg(footprint.svg);
+        }
+
+
+
+
     } catch (err) {
         console.error(err);
         return;
