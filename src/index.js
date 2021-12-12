@@ -33,18 +33,18 @@ module.exports = async (url) => {
         let kicadComponent = [];
         let svg = SVGJson.parse(sch.svg);
         let _component = getChildrenWithParam(svg.children[0] || [], 'c_para');
-        if ( _component ){
+        if (_component) {
             kicadComponent = await getComponentFromSvg(_component);
         }
 
         Tab.push("EESchema-LIBRARY Version 2.3");
         Tab.push("#encoding utf-8");
         Tab.push('#');
-        Tab.push('# Amperemeter_AC');
+        Tab.push('# ' + component.manufacturerPartnumber);
         Tab.push('#');
-        Tab.push('DEF Amperemeter_AC MES 0 1 N N 1 F N');
+        Tab.push('DEF ' + component.manufacturerPartnumber + ' MES 0 5 Y Y 1 F N');
         Tab.push('F0 "MES" -130 40 50 H V R CNN');
-        Tab.push('F1 "Amperemeter_AC" -130 -30 50 H V R CNN');
+        Tab.push('F1 "' + component.manufacturerPartnumber + '" -130 -30 50 H V R CNN');
         Tab.push('F2 "" 0 100 50 V I C CNN');
         Tab.push('F3 "" 0 100 50 V I C CNN');
         Tab.push('DRAW');
@@ -57,7 +57,7 @@ module.exports = async (url) => {
 
         let str = Tab.join("\n");
 
-        fs.writeFileSync(path.resolve(__dirname , "../out.lib"),str);
+        fs.writeFileSync(path.resolve(__dirname, "../"+ new Date().getTime() +".lib"), str);
     } catch (err) {
         console.error(err);
         return;
