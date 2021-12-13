@@ -1,5 +1,5 @@
 const actions = require('./action');
-const SVGJson = require('svg-parser')
+const SVGJson = require('svg-parser');
 const getComponentFromSvg = require('./get.component.from.svg');
 const getFootprintFromSvg = require('./get.footprint.from.svg');
 const fs = require('fs');
@@ -62,7 +62,11 @@ module.exports = async (url) => {
 
 
         if ( footprint ){
-            let _footprint = await getFootprintFromSvg(footprint.svg);
+            let _footprint = getChildrenWithParam(SVGJson.parse(footprint.svg).children[0] || [], 'c_para');
+            if (_footprint) {
+                let kicadFootprint = await getFootprintFromSvg(_footprint);
+            }
+            //let _footprint = await getFootprintFromSvg(footprint.svg);
         }
 
 
