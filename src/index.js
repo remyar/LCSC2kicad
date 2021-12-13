@@ -65,8 +65,16 @@ module.exports = async (url) => {
             let _footprint = getChildrenWithParam(SVGJson.parse(footprint.svg).children[0] || [], 'c_para');
             if (_footprint) {
                 let kicadFootprint = await getFootprintFromSvg(_footprint);
+                Tab = [];
+
+                Tab.push("(module " + component.manufacturerPartnumber + " (layer F.Cu)");
+                Tab.push(...kicadFootprint);
+                Tab.push(")");
+
+                let str = Tab.join("\n");
+
+                fs.writeFileSync(path.resolve(__dirname, "../"+ new Date().getTime() +".kicad_mod"), str);
             }
-            //let _footprint = await getFootprintFromSvg(footprint.svg);
         }
 
 

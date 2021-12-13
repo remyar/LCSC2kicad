@@ -13,7 +13,9 @@
             ],
             "program": "${workspaceFolder}\\index.js",
             "args": [ 
-                "https://lcsc.com/product-detail/MICROCHIP_Microchip-Tech-PIC12F675-I-SN_C9730.html"
+                "https://lcsc.com/product-detail/MICROCHIP_Microchip-Tech-PIC12F675-I-SN_C9730.html",
+                //"https://lcsc.com/product-detail/RS232-ICs_MaxLinear-SP232EEN-L-TR_C7078.html"
+                //"https://lcsc.com/product-detail/Bipolar-Transistors-BJT_Guangdong-Hottech-MMBT5551_C181136.html"
             ]
         }
     ]
