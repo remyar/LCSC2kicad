@@ -14,8 +14,13 @@
             "program": "${workspaceFolder}\\index.js",
             "args": [ 
                 "https://lcsc.com/product-detail/MICROCHIP_Microchip-Tech-PIC12F675-I-SN_C9730.html",
-                //"https://lcsc.com/product-detail/RS232-ICs_MaxLinear-SP232EEN-L-TR_C7078.html"
-                //"https://lcsc.com/product-detail/Bipolar-Transistors-BJT_Guangdong-Hottech-MMBT5551_C181136.html"
+                /*"https://lcsc.com/product-detail/RS232-ICs_MaxLinear-SP232EEN-L-TR_C7078.html",
+                "https://lcsc.com/product-detail/Bipolar-Transistors-BJT_Guangdong-Hottech-MMBT5551_C181136.html",
+                "https://lcsc.com/product-detail/Infrared-IR-LEDs_Everlight-Elec-IR383C_C710234.html",
+                "https://lcsc.com/product-detail/Infrared-IR-LEDs_OSRAM-Opto-Semicon-SFH4556_C554983.html",*/
+                //"https://lcsc.com/product-detail/USB-Connectors_XKB-Connectivity-U254-051T-4BH83-F1S_C397452.html"
+                //"https://lcsc.com/product-detail/Signal-Relays_PANASONIC-TX2-5V_C192257.html"
+                //"https://lcsc.com/product-detail/Battery-Connectors_Maxim-Integrated-DS9098P-TRL_C143325.html"
             ]
         }
     ]
