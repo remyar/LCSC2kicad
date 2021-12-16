@@ -18,6 +18,7 @@
   "homepage": "https://github.com/remyar/LCSC2kicad#readme",
   "dependencies": {
     "axios": "^0.24.0",
+    "commander": "^8.3.0",
     "node-html-parser": "^5.1.0",
     "svg-parser": "^2.0.4"
   }

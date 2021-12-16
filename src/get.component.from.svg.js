@@ -66,6 +66,9 @@ module.exports = async (svg) => {
                                         }
                                     }
                                 });
+                                if ( pinName.length == 0 || lineWidth == NaN){
+                                    break;
+                                }
                                 Tab.push("X");
                                 Tab.push(pinName);
                                 Tab.push(element.properties.c_spicepin.toString());
