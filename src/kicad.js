@@ -3,7 +3,7 @@ const path = require('path');
 
 async function _saveFile(p, filename, data) {
     if (fs.existsSync(p) == false) {
-        fs.mkdirSync(p);
+        fs.mkdirSync(p, { recursive: true });
     }
 
     if (fs.existsSync(p) == true) {
